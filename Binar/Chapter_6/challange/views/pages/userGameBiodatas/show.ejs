@@ -1,0 +1,33 @@
+<button type="button" onclick="history.back()" class="btn btn-light">
+    <i class="bi-arrow-left"></i>
+    Kembali
+  </button>
+  
+  <h3 class="my-3"><%= pageTitle %></h3>
+  
+  <div class="table-responsive mt-3">
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <th scope="row">Id Game</th>
+          <td><%= userGameBiodata.id_user_game %></td>
+        </tr>
+        <tr>
+          <th scope="row">Username</th>
+          <td><%= userGameBiodata.id_user_game_b.username %></td>
+        </tr>
+        <tr>
+          <th scope="row">Nama Lengkap</th>
+          <td><%= userGameBiodata.nama_lengkap %></td>
+        </tr>
+        <tr>
+          <th scope="row">Tanggal Lahir</th>
+          <td><%= userGameBiodata.tanggal_lahir %></td>
+        </tr>
+        <tr>
+          <th scope="row">Alamat</th>
+          <td><%= userGameBiodata.alamat %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

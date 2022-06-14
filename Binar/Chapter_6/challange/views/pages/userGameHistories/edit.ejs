@@ -1,0 +1,39 @@
+<h3 class="mb-3"><%= pageTitle %></h3>
+
+<form method="post" action="/userGameHistories/<%= userGameHistory.id %>?_method=PUT">
+    <div class="mb-4">
+        <label for="id_user_game" class="form-label">Username Game</label>
+        <select class="form-select" aria-label="UserGame" name="id_user_game" required>
+          <option selected disabled value="">-- Silahkan pilih --</option>
+          <% userGames.forEach((userGame) => { %>
+            <option value="<%= userGame.id %>">
+              <%= userGame.username %>
+            </option>
+          <% }) %>
+        </select>
+      </div>
+  <div class="mb-3">
+    <label for="id_game" class="form-label">ID Game</label>
+    <input type="text" class="form-control" name="id_game" id="id_game" value="<%= userGameHistory.id_game %>" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="score" class="form-label"> score</label>
+    <input type="text" class="form-control" id="score" name="score" value="<%= userGameHistory.score %>" required>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-auto">
+      <button type="button" onclick="history.back()" class="btn btn-danger">Batal</button>
+    </div>
+
+    <div class="col-auto">
+      <button type="reset" class="btn btn-secondary">Reset</button>
+    </div>
+
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>

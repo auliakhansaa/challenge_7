@@ -1,0 +1,45 @@
+<h3 class="mb-3"><%= pageTitle %></h3>
+
+<form method="post" action="/userGameBiodatas/<%= userGameBiodata.id %>?_method=PUT">
+    <div class="mb-4">
+        <label for="id_user_game" class="form-label">Username Game</label>
+        <select class="form-select" aria-label="UserGame" name="id_user_game" required>
+          <option selected disabled value="">-- Silahkan pilih --</option>
+          <% userGames.forEach((userGame) => { %>
+            <option value="<%= userGame.id %>">
+              <%= userGame.username %>
+            </option>
+          <% }) %>
+        </select>
+      </div>
+  <div class="mb-3">
+    <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
+    <input type="text" class="form-control" name="nama_lengkap" id="nama_lengkap" value="<%= userGameBiodata.nama_lengkap %>" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="tanggal_lahir" class="form-label">Tanggal Lahir</label>
+    <input type="text" class="form-control" id="tanggal_lahir" name="tanggal_lahir" value="<%= userGameBiodata.tanggal_lahir %>" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="stock" class="form-label">Alamat</label>
+    <textarea class="form-control" id="alamat" name="alamat" ><%= userGameBiodata.alamat %></textarea>
+  </div>
+
+  
+
+  <div class="row">
+    <div class="col-auto">
+      <button type="button" onclick="history.back()" class="btn btn-danger">Batal</button>
+    </div>
+
+    <div class="col-auto">
+      <button type="reset" class="btn btn-secondary">Reset</button>
+    </div>
+
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>

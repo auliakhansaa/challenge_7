@@ -1,0 +1,30 @@
+<button type="button" onclick="history.back()" class="btn btn-light">
+    <i class="bi-arrow-left"></i>
+    Kembali
+  </button>
+  
+  <h3 class="my-3"><%= pageTitle %></h3>
+  
+  <div class="table-responsive mt-3">
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <th scope="row">ID User Game</th>
+          <td><%= userGameHistory.id_user_game %></td>
+        </tr>
+        <tr>
+          <th scope="row">Username</th>
+          <td><%= userGameHistory.id_user_game_h.username %></td>
+        </tr>
+        <tr>
+          <th scope="row">ID Game</th>
+          <td><%= userGameHistory.id_game %></td>
+        </tr>
+        <tr>
+          <th scope="row">Score</th>
+          <td><%= userGameHistory.score %></td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>

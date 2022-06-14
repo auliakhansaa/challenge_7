@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "m",
+    "password": null,
+    "database": "c6p4_development",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "m",
+    "password": null,
+    "database": "c6p4_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "m",
+    "password": null,
+    "database": "c6p4_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
